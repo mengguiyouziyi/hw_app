@@ -12,6 +12,7 @@ class AppsSpider(scrapy.Spider):
 	name = 'apps'
 	allowed_domains = ['appstore.huawei.com']
 	start_url = 'http://appstore.huawei.com/search/{}/'
+	# start_url = 'http://appstore.huawei.com/plugin/appstore/search?searchText={}'
 	# chis = [chr(ch) for ch in range(0x4e00, 0x9fa6)]
 
 	def start_requests(self):
@@ -27,23 +28,34 @@ class AppsSpider(scrapy.Spider):
 
 	def parse(self, response):
 		print(response.url)
-		num_word = response.xpath('//div[@class="dotline-btn list-game-app"]/p/span').extract_first()
+		num_word = response.xpath('//div[@class="dotline-btn list-game-app"]/p/span/text()').extract_first()
 		num = re.search(r'\d+', num_word).group()
 		if not int(num):
 			return
-		page_num = math.ceil(int(num) / 24)
+		page_num1 = math.ceil(int(num) / 24)
 
-		cur_page_list = re.findall(r'/(\d+)$', response.url)
-		cur_page = int(cur_page_list[0]) if cur_page_list else 1
+		# cur_page_list = re.findall(r'/(\d+)$', response.url)
+		# cur_page = int(cur_page_list[0]) if cur_page_list else 1
 
 		item_url_list = response.xpath('//*[@class="game-info-ico"]/a/@href').extract()
 		for item_url in item_url_list:
 			yield scrapy.Request(item_url, callback=self.parse_item)
 
-		while cur_page < page_num:
-			yield scrapy.Request(response.url + str(cur_page + 1), callback=self.parse)
+		if page_num1 > 1:
+			urls = (self.start_url.format(c) for c in range(2, page_num1 + 1))
+			for url in urls:
+				yield scrapy.Request(url, callback=self.parse)
+
+		# if cur_page < page_num:
+		# 	if cur_page == 1:
+		# 		yield scrapy.Request(response.url + str(cur_page + 1), callback=self.parse)
+		# 	else:
+		# 		# response.url + str(cur_page)
+		# 		yield scrapy.Request(re.sub(r'/(\d+)$', str(cur_page + 1), response.url), callback=self.parse)
 
 	def parse_item(self, response):
+		if '抱歉，找不到您要的页' in response.text:
+			return
 		item = AppItem()
 		x = re.search(r'/C(\d+)$', response.url)
 		soft_id = int(x.group(1)) if x else -1
@@ -56,7 +68,7 @@ class AppsSpider(scrapy.Spider):
 			'//ul[@class="app-info-ul nofloat"]/li/p/span[@class="grey sub"]/text()').extract_first()
 		soft_score_un = response.xpath(
 			'//ul[@class="app-info-ul nofloat"]/li/p/span[starts-with(@class, "score")]/@class').extract_first()
-		soft_score = soft_score_un.replace('score_', '')
+		soft_score = soft_score_un.replace('score_', '') if soft_score_un else ''
 		li = response.xpath('//li[@class="ul-li-detail"]/span/text()').extract()
 		soft_size = li[0] if len(li) == 4 else ''
 		create_date = li[1] if len(li) == 4 else ''
