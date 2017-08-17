@@ -1,0 +1,485 @@
+{
+  "moreFineList": {
+    "count": "52",
+    "list": [
+      {
+        "appId": "C57804",
+        "appKinds": [
+          {
+            "kindId": "358",
+            "topCat": "应用",
+            "topCatId": "13",
+            "typeName": "购物比价"
+          }
+        ],
+        "author": "天猫无线",
+        "awardDesc": "",
+        "currency": null,
+        "downCount": "541364533",
+        "downCountDesc": "5.5 亿次安装",
+        "forumUrl": "",
+        "giftCount": 0,
+        "hot": "7",
+        "intro": null,
+        "logo": "http:\/\/appimg.hicloud.com\/hwmarket\/files\/application\/icon144\/22487db57d1642628224e10d7c4c9285.png",
+        "name": "天猫",
+        "originalSize": "42488629",
+        "pkgName": "com.tmall.wireless",
+        "price": "0",
+        "raidersUrl": "",
+        "size": "40.5M",
+        "subName": "天猫",
+        "typeName": null,
+        "url": "http:\/\/appdlc.hicloud.com\/dl\/appdl\/application\/apk\/22\/22487db57d1642628224e10d7c4c9285\/com.tmall.wireless.1708011542.apk?sign=mw@mw1502935547027",
+        "weekDownCount": null
+      },
+      {
+        "appId": "C262",
+        "appKinds": [
+          {
+            "kindId": "361",
+            "topCat": "应用",
+            "topCatId": "13",
+            "typeName": "旅游住宿"
+          }
+        ],
+        "author": "北京趣拿软件科技有限公司",
+        "awardDesc": "",
+        "currency": null,
+        "downCount": "507808931",
+        "downCountDesc": "5.1 亿次安装",
+        "forumUrl": "",
+        "giftCount": 0,
+        "hot": "10",
+        "intro": null,
+        "logo": "http:\/\/appimg.hicloud.com\/hwmarket\/files\/application\/icon144\/b6cf891532034d2fabdedbc899a03007.png",
+        "name": "去哪儿旅行",
+        "originalSize": "39656394",
+        "pkgName": "com.Qunar",
+        "price": "0",
+        "raidersUrl": "",
+        "size": "37.8M",
+        "subName": "去哪儿旅行",
+        "typeName": null,
+        "url": "http:\/\/appdlc.hicloud.com\/dl\/appdl\/application\/apk\/b6\/b6cf891532034d2fabdedbc899a03007\/com.Qunar.1707201517.apk?sign=mw@mw1502935547029",
+        "weekDownCount": null
+      },
+      {
+        "appId": "C10134672",
+        "appKinds": [
+          {
+            "kindId": "15",
+            "topCat": "游戏",
+            "topCatId": "2",
+            "typeName": "休闲益智"
+          }
+        ],
+        "author": "乐元素科技（北京）股份有限公司",
+        "awardDesc": "",
+        "currency": null,
+        "downCount": "369495041",
+        "downCountDesc": "3.7 亿次安装",
+        "forumUrl": "",
+        "giftCount": 0,
+        "hot": "8",
+        "intro": null,
+        "logo": "http:\/\/appimg.hicloud.com\/hwmarket\/files\/application\/icon144\/212b3dbc6f3847b09226019e086382e9.png",
+        "name": "开心消消乐®",
+        "originalSize": "97644644",
+        "pkgName": "com.happyelements.AndroidAnimal",
+        "price": "0",
+        "raidersUrl": "",
+        "size": "93.1M",
+        "subName": "开心消消乐®",
+        "typeName": null,
+        "url": "http:\/\/appdlc.hicloud.com\/dl\/appdl\/application\/apk\/21\/212b3dbc6f3847b09226019e086382e9\/com.happyelements.AndroidAnimal.1707261622.apk?sign=mw@mw1502935547030",
+        "weekDownCount": null
+      },
+      {
+        "appId": "C5683",
+        "appKinds": [
+          {
+            "kindId": "26",
+            "topCat": "应用",
+            "topCatId": "13",
+            "typeName": "社交通讯"
+          }
+        ],
+        "author": "腾讯科技（北京）有限公司",
+        "awardDesc": "",
+        "currency": null,
+        "downCount": "0",
+        "downCountDesc": "28.5 亿次安装",
+        "forumUrl": "",
+        "giftCount": 0,
+        "hot": "7",
+        "intro": null,
+        "logo": "http:\/\/appimg.hicloud.com\/hwmarket\/files\/application\/icon144\/1c6487a95eb24b3bb49437e0c2683ac5.png",
+        "name": "微信",
+        "originalSize": "46258499",
+        "pkgName": "com.tencent.mm",
+        "price": "0",
+        "raidersUrl": "",
+        "size": "44.1M",
+        "subName": "微信",
+        "typeName": null,
+        "url": "http:\/\/appdlc.hicloud.com\/dl\/appdl\/application\/apk\/1c\/1c6487a95eb24b3bb49437e0c2683ac5\/com.tencent.mm.1707132002.apk?sign=mw@mw1502935547031",
+        "weekDownCount": null
+      },
+      {
+        "appId": "C39196",
+        "appKinds": [
+          {
+            "kindId": "361",
+            "topCat": "应用",
+            "topCatId": "13",
+            "typeName": "旅游住宿"
+          }
+        ],
+        "author": "艺龙网信息技术（北京）有限公司",
+        "awardDesc": "",
+        "currency": null,
+        "downCount": "61401152",
+        "downCountDesc": "6141 万次安装",
+        "forumUrl": "",
+        "giftCount": 0,
+        "hot": "7",
+        "intro": null,
+        "logo": "http:\/\/appimg.hicloud.com\/hwmarket\/files\/application\/icon144\/c6dc516c16b14bb48e0262237e25147e.png",
+        "name": "艺龙旅行",
+        "originalSize": "45470192",
+        "pkgName": "com.dp.android.elong",
+        "price": "0",
+        "raidersUrl": "",
+        "size": "43.4M",
+        "subName": "艺龙旅行",
+        "typeName": null,
+        "url": "http:\/\/appdlc.hicloud.com\/dl\/appdl\/application\/apk\/c6\/c6dc516c16b14bb48e0262237e25147e\/com.dp.android.elong.1708150657.apk?sign=mw@mw1502935547032",
+        "weekDownCount": null
+      },
+      {
+        "appId": "C41277",
+        "appKinds": [
+          {
+            "kindId": "358",
+            "topCat": "应用",
+            "topCatId": "13",
+            "typeName": "购物比价"
+          }
+        ],
+        "author": "江苏苏宁易购电子商务有限公司",
+        "awardDesc": "",
+        "currency": null,
+        "downCount": "82543898",
+        "downCountDesc": "8255 万次安装",
+        "forumUrl": "",
+        "giftCount": 0,
+        "hot": "8",
+        "intro": null,
+        "logo": "http:\/\/appimg.hicloud.com\/hwmarket\/files\/application\/icon144\/b862504cc33b43f4b458036a72c18838.png",
+        "name": "苏宁易购",
+        "originalSize": "59729232",
+        "pkgName": "com.suning.mobile.ebuy",
+        "price": "0",
+        "raidersUrl": "",
+        "size": "57.0M",
+        "subName": "苏宁易购",
+        "typeName": null,
+        "url": "http:\/\/appdlc.hicloud.com\/dl\/appdl\/application\/apk\/b8\/b862504cc33b43f4b458036a72c18838\/com.suning.mobile.ebuy.1708041508.apk?sign=mw@mw1502935547033",
+        "weekDownCount": null
+      },
+      {
+        "appId": "C10329573",
+        "appKinds": [
+          {
+            "kindId": "16",
+            "topCat": "游戏",
+            "topCatId": "2",
+            "typeName": "经营策略"
+          }
+        ],
+        "author": "北京昆仑乐享网络技术有限公司",
+        "awardDesc": "",
+        "currency": null,
+        "downCount": "33689382",
+        "downCountDesc": "3369 万次安装",
+        "forumUrl": "",
+        "giftCount": 0,
+        "hot": "8",
+        "intro": null,
+        "logo": "http:\/\/appimg.hicloud.com\/hwmarket\/files\/application\/icon144\/95f175bba27042bb8e5a73bfb9a7ad73.png",
+        "name": "部落冲突",
+        "originalSize": "90457277",
+        "pkgName": "com.supercell.clashofclans.huawei",
+        "price": "0",
+        "raidersUrl": "",
+        "size": "86.3M",
+        "subName": "部落冲突",
+        "typeName": null,
+        "url": "http:\/\/appdlc.hicloud.com\/dl\/appdl\/application\/apk\/95\/95f175bba27042bb8e5a73bfb9a7ad73\/com.supercell.clashofclans.huawei.1706291442.apk?sign=mw@mw1502935547034",
+        "weekDownCount": null
+      },
+      {
+        "appId": "C10435311",
+        "appKinds": [
+          {
+            "kindId": "33",
+            "topCat": "应用",
+            "topCatId": "13",
+            "typeName": "拍摄美化"
+          }
+        ],
+        "author": "深圳市脸萌科技有限公司",
+        "awardDesc": "",
+        "currency": null,
+        "downCount": "130362486",
+        "downCountDesc": "1.4 亿次安装",
+        "forumUrl": "",
+        "giftCount": 0,
+        "hot": "8",
+        "intro": null,
+        "logo": "http:\/\/appimg.hicloud.com\/hwmarket\/files\/application\/icon144\/d91e46684aa84bd0bebb506e5d3245b1.png",
+        "name": "Faceu激萌",
+        "originalSize": "40753618",
+        "pkgName": "com.lemon.faceu",
+        "price": "0",
+        "raidersUrl": "",
+        "size": "38.9M",
+        "subName": "Faceu激萌",
+        "typeName": null,
+        "url": "http:\/\/appdlc.hicloud.com\/dl\/appdl\/application\/apk\/d9\/d91e46684aa84bd0bebb506e5d3245b1\/com.lemon.faceu.1708161612.apk?sign=mw@mw1502935547036",
+        "weekDownCount": null
+      },
+      {
+        "appId": "C10059940",
+        "appKinds": [
+          {
+            "kindId": "358",
+            "topCat": "应用",
+            "topCatId": "13",
+            "typeName": "购物比价"
+          }
+        ],
+        "author": "北京口袋时尚科技有限公司",
+        "awardDesc": "",
+        "currency": null,
+        "downCount": "34683850",
+        "downCountDesc": "3469 万次安装",
+        "forumUrl": "",
+        "giftCount": 0,
+        "hot": "10",
+        "intro": null,
+        "logo": "http:\/\/appimg.hicloud.com\/hwmarket\/files\/application\/icon144\/b62a5027d90143e9882070134b16dcbf.png",
+        "name": "微店",
+        "originalSize": "25241256",
+        "pkgName": "com.koudai.weishop",
+        "price": "0",
+        "raidersUrl": "",
+        "size": "24.1M",
+        "subName": "微店",
+        "typeName": null,
+        "url": "http:\/\/appdlc.hicloud.com\/dl\/appdl\/application\/apk\/b6\/b62a5027d90143e9882070134b16dcbf\/com.koudai.weishop.1708161202.apk?sign=mw@mw1502935547037",
+        "weekDownCount": null
+      },
+      {
+        "appId": "C10189589",
+        "appKinds": [
+          {
+            "kindId": "15",
+            "topCat": "游戏",
+            "topCatId": "2",
+            "typeName": "休闲益智"
+          }
+        ],
+        "author": "北京柠檬微趣科技股份有限公司",
+        "awardDesc": "",
+        "currency": null,
+        "downCount": "61994445",
+        "downCountDesc": "6200 万次安装",
+        "forumUrl": "",
+        "giftCount": 0,
+        "hot": "9",
+        "intro": null,
+        "logo": "http:\/\/appimg.hicloud.com\/hwmarket\/files\/application\/icon144\/15c7049f68e7492f9201daee9e43741e.png",
+        "name": "宾果消消消（楚乔赵丽颖约你）",
+        "originalSize": "96355721",
+        "pkgName": "com.mfp.jelly.huawei",
+        "price": "0",
+        "raidersUrl": "",
+        "size": "91.9M",
+        "subName": "宾果消消消…",
+        "typeName": null,
+        "url": "http:\/\/appdlc.hicloud.com\/dl\/appdl\/application\/apk\/15\/15c7049f68e7492f9201daee9e43741e\/com.mfp.jelly.huawei.1708141142.apk?sign=mw@mw1502935547038",
+        "weekDownCount": null
+      },
+      {
+        "appId": "C10384770",
+        "appKinds": [
+          {
+            "kindId": "27",
+            "topCat": "应用",
+            "topCatId": "13",
+            "typeName": "便捷生活"
+          }
+        ],
+        "author": "北京来人网络科技有限公司",
+        "awardDesc": "",
+        "currency": null,
+        "downCount": "2397275",
+        "downCountDesc": "240 万次安装",
+        "forumUrl": "",
+        "giftCount": 0,
+        "hot": "7",
+        "intro": null,
+        "logo": "http:\/\/appimg.hicloud.com\/hwmarket\/files\/application\/icon144\/b0cd74410477475aa550cf4dda1c3a15.png",
+        "name": "来人到家",
+        "originalSize": "10611110",
+        "pkgName": "com.lairen.android.apps.customer_lite",
+        "price": "0",
+        "raidersUrl": "",
+        "size": "10.1M",
+        "subName": "来人到家",
+        "typeName": null,
+        "url": "http:\/\/appdlc.hicloud.com\/dl\/appdl\/application\/apk\/b0\/b0cd74410477475aa550cf4dda1c3a15\/com.lairen.android.apps.customer_lite.1708031817.apk?sign=mw@mw1502935547039",
+        "weekDownCount": null
+      },
+      {
+        "appId": "C10187826",
+        "appKinds": [
+          {
+            "kindId": "359",
+            "topCat": "应用",
+            "topCatId": "13",
+            "typeName": "美食"
+          }
+        ],
+        "author": "北京三快在线科技有限公司",
+        "awardDesc": "",
+        "currency": null,
+        "downCount": "68970078",
+        "downCountDesc": "6898 万次安装",
+        "forumUrl": "",
+        "giftCount": 0,
+        "hot": "3",
+        "intro": null,
+        "logo": "http:\/\/appimg.hicloud.com\/hwmarket\/files\/application\/icon144\/b1a429a091d348e4ac594c1ee8503759.png",
+        "name": "美团外卖",
+        "originalSize": "15950785",
+        "pkgName": "com.sankuai.meituan.takeoutnew",
+        "price": "0",
+        "raidersUrl": "",
+        "size": "15.2M",
+        "subName": "美团外卖",
+        "typeName": null,
+        "url": "http:\/\/appdlc.hicloud.com\/dl\/appdl\/application\/apk\/b1\/b1a429a091d348e4ac594c1ee8503759\/com.sankuai.meituan.takeoutnew.1708071132.apk?sign=mw@mw1502935547040",
+        "weekDownCount": null
+      },
+      {
+        "appId": "C10281112",
+        "appKinds": [
+          {
+            "kindId": "15",
+            "topCat": "游戏",
+            "topCatId": "2",
+            "typeName": "休闲益智"
+          }
+        ],
+        "author": "世熠网络科技（上海）有限公司",
+        "awardDesc": "",
+        "currency": null,
+        "downCount": "23472688",
+        "downCountDesc": "2348 万次安装",
+        "forumUrl": "",
+        "giftCount": 0,
+        "hot": "7",
+        "intro": null,
+        "logo": "http:\/\/appimg.hicloud.com\/hwmarket\/files\/application\/icon144\/d755a919329e423e9d9edef1db5fcb6f.png",
+        "name": "波克捕鱼",
+        "originalSize": "38917759",
+        "pkgName": "com.pokercity.bydrqp.huawei",
+        "price": "0",
+        "raidersUrl": "",
+        "size": "37.1M",
+        "subName": "波克捕鱼",
+        "typeName": null,
+        "url": "http:\/\/appdlc.hicloud.com\/dl\/appdl\/application\/apk\/d7\/d755a919329e423e9d9edef1db5fcb6f\/com.pokercity.bydrqp.huawei.1707311527.apk?sign=mw@mw1502935547041",
+        "weekDownCount": null
+      },
+      {
+        "appId": "C10395198",
+        "appKinds": [
+          {
+            "kindId": "20",
+            "topCat": "游戏",
+            "topCatId": "2",
+            "typeName": "角色扮演"
+          }
+        ],
+        "author": "杭州网易雷火科技有限公司",
+        "awardDesc": "",
+        "currency": null,
+        "downCount": "25556492",
+        "downCountDesc": "2556 万次安装",
+        "forumUrl": "",
+        "giftCount": 0,
+        "hot": "7",
+        "intro": null,
+        "logo": "http:\/\/appimg.hicloud.com\/hwmarket\/files\/application\/icon144\/b7f9e7fa3af54d5a932430d3f09180b5.png",
+        "name": "倩女幽魂",
+        "originalSize": "736496127",
+        "pkgName": "com.netease.l10.huawei",
+        "price": "0",
+        "raidersUrl": "",
+        "size": "702.4M",
+        "subName": "倩女幽魂",
+        "typeName": null,
+        "url": "http:\/\/appdlc.hicloud.com\/dl\/appdl\/application\/apk\/b7\/b7f9e7fa3af54d5a932430d3f09180b5\/com.netease.l10.huawei.1708021838.apk?sign=mw@mw1502935547043",
+        "weekDownCount": null
+      },
+      {
+        "appId": "C10379172",
+        "appKinds": [
+          {
+            "kindId": "359",
+            "topCat": "应用",
+            "topCatId": "13",
+            "typeName": "美食"
+          }
+        ],
+        "author": "北京每日优鲜电子商务有限公司",
+        "awardDesc": "",
+        "currency": null,
+        "downCount": "4721496",
+        "downCountDesc": "473 万次安装",
+        "forumUrl": "",
+        "giftCount": 0,
+        "hot": "8",
+        "intro": null,
+        "logo": "http:\/\/appimg.hicloud.com\/hwmarket\/files\/application\/icon144\/117acdfccb5b4fb591e93e8b8671e270.png",
+        "name": "每日优鲜",
+        "originalSize": "14457339",
+        "pkgName": "cn.missfresh.application",
+        "price": "0",
+        "raidersUrl": "",
+        "size": "13.8M",
+        "subName": "每日优鲜",
+        "typeName": null,
+        "url": "http:\/\/appdlc.hicloud.com\/dl\/appdl\/application\/apk\/11\/117acdfccb5b4fb591e93e8b8671e270\/cn.missfresh.application.1708102022.apk?sign=mw@mw1502935547045",
+        "weekDownCount": null
+      }
+    ],
+    "object": null,
+    "pageNum": "1",
+    "parentType": null,
+    "result": {
+      "code": "00000",
+      "desc": "success."
+    },
+    "resultCode": null,
+    "resultDesc": null,
+    "rtnCode": 0,
+    "status": 200,
+    "totalPages": "4",
+    "typeName": null
+  }
+}
