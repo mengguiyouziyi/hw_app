@@ -13,18 +13,18 @@ class AppsSpider(scrapy.Spider):
 	allowed_domains = ['appstore.huawei.com']
 	start_url = 'http://appstore.huawei.com/search/{}/'
 	# start_url = 'http://appstore.huawei.com/plugin/appstore/search?searchText={}'
-	# chis = [chr(ch) for ch in range(0x4e00, 0x9fa6)]
+	chis = [chr(ch) for ch in range(0x4e00, 0x9fa6)]
 
 	def start_requests(self):
-		# urls = (self.start_url.format(c) for c in self.chis)
-		# for url in urls:
-		# 	yield scrapy.Request(url)
-		while True:
-			zh_word = get_key('zh_word')
-			if not zh_word:
-				continue
-			url = self.start_url.format(zh_word)
+		urls = (self.start_url.format(c) for c in self.chis)
+		for url in urls:
 			yield scrapy.Request(url)
+		# while True:
+		# 	zh_word = get_key('zh_word')
+		# 	if not zh_word:
+		# 		continue
+		# 	url = self.start_url.format(zh_word)
+		# 	yield scrapy.Request(url)
 
 	def parse(self, response):
 		if '抱歉，找不到您要的页' in response.text:
@@ -71,11 +71,14 @@ class AppsSpider(scrapy.Spider):
 		soft_score_un = response.xpath(
 			'//ul[@class="app-info-ul nofloat"]/li/p/span[starts-with(@class, "score")]/@class').extract_first()
 		soft_score = soft_score_un.replace('score_', '') if soft_score_un else ''
+
 		li = response.xpath('//li[@class="ul-li-detail"]/span/text()').extract()
 		soft_size = li[0] if len(li) == 4 else ''
 		create_date = li[1] if len(li) == 4 else ''
-		auth = response.xpath('//li[@class="ul-li-detail"]/span[3]/@title').extract_first() if len(li) == 4 else ''
+		l = response.xpath('//li[@class="ul-li-detail"]')
+		auth = l[2].xpath('./span/@title').extract_first() if len(li) == 4 else ''
 		version = li[3] if len(li) == 4 else ''
+
 		pic_url = response.xpath('.//*[@id="contentImages"]/ul/li/a/img/@src').extract()
 		des = response.xpath(".//*[@id='app_strdesc']/text()").extract_first()
 		comm_word = response.xpath(".//*[@id='commentForm']/h4/span/text()").extract_first()
