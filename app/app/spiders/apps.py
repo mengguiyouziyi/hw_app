@@ -13,18 +13,18 @@ class AppsSpider(scrapy.Spider):
 	allowed_domains = ['appstore.huawei.com']
 	start_url = 'http://appstore.huawei.com/search/{}/'
 	# start_url = 'http://appstore.huawei.com/plugin/appstore/search?searchText={}'
-	chis = [chr(ch) for ch in range(0x4e00, 0x9fa6)]
+	# chis = [chr(ch) for ch in range(0x4e00, 0x9fa6)]
 
 	def start_requests(self):
-		urls = (self.start_url.format(c) for c in self.chis)
-		for url in urls:
-			yield scrapy.Request(url)
-		# while True:
-		# 	zh_word = get_key('zh_word')
-		# 	if not zh_word:
-		# 		continue
-		# 	url = self.start_url.format(zh_word)
+		# urls = (self.start_url.format(c) for c in self.chis)
+		# for url in urls:
 		# 	yield scrapy.Request(url)
+		while True:
+			zh_word = get_key('zh_word')
+			if not zh_word:
+				continue
+			url = self.start_url.format(zh_word)
+			yield scrapy.Request(url)
 
 	def parse(self, response):
 		if '抱歉，找不到您要的页' in response.text:
