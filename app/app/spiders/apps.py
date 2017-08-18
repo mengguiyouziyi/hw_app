@@ -27,6 +27,8 @@ class AppsSpider(scrapy.Spider):
 			yield scrapy.Request(url)
 
 	def parse(self, response):
+		if '抱歉，找不到您要的页' in response.text:
+			return
 		print(response.url)
 		num_word = response.xpath('//div[@class="dotline-btn list-game-app"]/p/span/text()').extract_first()
 		num = re.search(r'\d+', num_word).group()
@@ -72,7 +74,7 @@ class AppsSpider(scrapy.Spider):
 		li = response.xpath('//li[@class="ul-li-detail"]/span/text()').extract()
 		soft_size = li[0] if len(li) == 4 else ''
 		create_date = li[1] if len(li) == 4 else ''
-		auth = li[2] if len(li) == 4 else ''
+		auth = response.xpath('//li[@class="ul-li-detail"]/span[3]/@title').extract_first() if len(li) == 4 else ''
 		version = li[3] if len(li) == 4 else ''
 		pic_url = response.xpath('.//*[@id="contentImages"]/ul/li/a/img/@src').extract()
 		des = response.xpath(".//*[@id='app_strdesc']/text()").extract_first()

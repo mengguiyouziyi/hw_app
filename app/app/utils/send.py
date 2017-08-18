@@ -25,6 +25,7 @@ def send_key(key):
 
 	for i in chis:
 		red.send_to_queue(key, i)
+		print(i)
 
 	print('done')
 
