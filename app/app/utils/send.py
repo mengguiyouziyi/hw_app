@@ -16,17 +16,35 @@ def send_key(key):
 	"""
 		本机 localhost；公司 etl2.innotree.org；服务器 etl1.innotree.org
 	"""
+	# red = QueueRedis()
+	# chis = [chr(ch) for ch in range(0x4e00, 0x9fa6)]
+	# nums = range(10)
+	# abc = [chr(i) for i in range(97,123)]
+	# chis.extend(nums)
+	# chis.extend(abc)
+	#
+	# for i in chis:
+	# 	red.send_to_queue(key, i)
+	# 	print(i)
+	#
+	# print('done')
+	mysql = pymysql.connect(host='etl1.innotree.org', port=3308, user='spider', password='spider', db='spider',
+	                        charset='utf8', cursorclass=pymysql.cursors.DictCursor)
+	try:
+		with mysql.cursor() as cursor:
+			sql = """select soft_name from hw_app ORDER BY soft_id"""
+			cursor.execute(sql)
+			results = cursor.fetchall()
+			values = [i['com_name'].strip() for i in results]
+	finally:
+		mysql.close()
+
 	red = QueueRedis()
-	chis = [chr(ch) for ch in range(0x4e00, 0x9fa6)]
-	nums = range(10)
-	abc = [chr(i) for i in range(97,123)]
-	chis.extend(nums)
-	chis.extend(abc)
 
-	for i in chis:
-		red.send_to_queue(key, i)
-		print(i)
-
+	if values:
+		for value in values:
+			red.send_to_queue(key, value)
+			print(value)
 	print('done')
 
 
