@@ -32,10 +32,12 @@ def send_key(key):
 	                        charset='utf8', cursorclass=pymysql.cursors.DictCursor)
 	try:
 		with mysql.cursor() as cursor:
-			sql = """select soft_name from hw_app ORDER BY soft_id"""
+			sql = """select soft_id, soft_name from hw_app ORDER BY soft_id"""
 			cursor.execute(sql)
 			results = cursor.fetchall()
-			values = [i['com_name'].strip() for i in results]
+			# for result in results:
+			# 	print(result)
+			values = [i['soft_name'].strip() for i in results if i['soft_name']]
 	finally:
 		mysql.close()
 
@@ -49,7 +51,7 @@ def send_key(key):
 
 
 if __name__ == '__main__':
-	send_key(key='zh_word')
+	send_key(key='hw_zh')
 
 
 
