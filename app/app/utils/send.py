@@ -35,8 +35,6 @@ def send_key(key):
 			sql = """select soft_id, soft_name from hw_app ORDER BY soft_id"""
 			cursor.execute(sql)
 			results = cursor.fetchall()
-			# for result in results:
-			# 	print(result)
 			values = [i['soft_name'].strip() for i in results if i['soft_name']]
 	finally:
 		mysql.close()
