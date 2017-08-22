@@ -44,7 +44,7 @@ def send_key(key):
 	if values:
 		for value in values:
 			red.send_to_queue(key, value)
-			print(value)
+			print(1)
 	print('done')
 
 
