@@ -49,7 +49,7 @@ def send_key(key):
 
 
 if __name__ == '__main__':
-	send_key(key='hw_zh')
+	send_key(key='zh_word')
 
 
 
