@@ -52,7 +52,8 @@ class AppsSpider(scrapy.Spider):
 		version = li[3] if len(li) == 4 else ''
 
 		pic_url = response.xpath('.//*[@id="contentImages"]/ul/li/a/img[@class="showimg"]/@src').extract()
-		des = response.xpath(".//*[@id='app_strdesc']/text()").extract_first()
+		des_list = response.xpath(".//*[@id='app_strdesc']/text()").extract()
+		des = ' '.join(des_list) if des_list else ''
 		comm_word = response.xpath(".//*[@id='commentForm']/h4/span/text()").extract_first()
 		s = re.search(r'\d+', comm_word) if comm_word else ''
 		comm_num = s.group() if s else ''
