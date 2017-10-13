@@ -19,7 +19,7 @@ class MysqlPipeline(object):
 		self.cursor = self.conn.cursor()
 
 	def process_item(self, item, spider):
-		sql = """replace into hw_app(soft_id, logo_url, soft_name, pname, down_num, soft_score, soft_size, create_date, auth, version, pic_url, des, comm_num, crawl_time) 
+		sql = """replace into hw_app_update(soft_id, logo_url, soft_name, pname, down_num, soft_score, soft_size, create_date, auth, version, pic_url, des, comm_num, crawl_time) 
                 VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"""
 		args = (
 			item['soft_id'], item['logo_url'], item['soft_name'], item['pname'], item['down_num'], item['soft_score'],
@@ -31,4 +31,3 @@ class MysqlPipeline(object):
 		self.conn.commit()
 		print(str(item['soft_id']))
 
-	# print(str(item['app_id']))

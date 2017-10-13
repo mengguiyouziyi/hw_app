@@ -1,68 +1,34 @@
 # -*- coding: utf-8 -*-
 import scrapy
 import re
-import math
 from datetime import datetime
 from app.settings import SQL_DATETIME_FORMAT
 from app.items import AppItem
-from urllib.parse import urljoin
-# from app.utils.get import get_key
+from app.utils.get import get_key
 
 
 class AppsSpider(scrapy.Spider):
-	name = 'apps'
+	name = 'apps_update'
 	allowed_domains = ['appstore.huawei.com']
 	# start_url = 'http://appstore.huawei.com/search/{}/'
-	start_url = 'http://appstore.huawei.com/plugin/appstore/search?searchText={}'
-	chis = [chr(ch) for ch in range(0x4e00, 0x9fa6)]
+	start_url = 'http://appstore.huawei.com/app/C{}'
+	# start_url = 'http://appstore.huawei.com/plugin/appstore/search?searchText={}'
+	# chis = [chr(ch) for ch in range(0x4e00, 0x9fa6)]
 
 	def start_requests(self):
-		urls = (self.start_url.format(c) for c in self.chis)
-		for url in urls:
-			yield scrapy.Request(url)
-		# while True:
-		# 	zh_word = get_key('zh_word')
-		# 	if not zh_word:
-		# 		continue
-		# 	url = self.start_url.format(zh_word)
+		# urls = (self.start_url.format(c) for c in self.chis)
+		# for url in urls:
 		# 	yield scrapy.Request(url)
+		while True:
+			zh_word = get_key('hw_id')
+			if not zh_word:
+				continue
+			url = self.start_url.format(zh_word)
+			yield scrapy.Request(url)
 
 	def parse(self, response):
-		print(response.url)
+		# print(response.url)
 		if '抱歉，找不到您要的页' in response.text or '对不起！没有您要的数据！' in response.text:
-			return
-		num_word = response.xpath('//div[@class="dotline-btn list-game-app"]/p/span/span/text()').extract_first()
-		# print(num_word)
-		num = re.search(r'\d+', num_word).group()
-		# print(num)
-		if not int(num):
-			return
-		page_num1 = math.ceil(int(num) / 24)
-
-		# cur_page_list = re.findall(r'/(\d+)$', response.url)
-		# cur_page = int(cur_page_list[0]) if cur_page_list else 1
-
-		item_url_list = response.xpath('//*[@class="game-info-ico"]/a/@href').extract()
-		for item_url in item_url_list:
-			item_url_quan = urljoin(response.url, item_url)
-			# print(item_url_quan)
-			yield scrapy.Request(item_url_quan, callback=self.parse_item)
-
-		if page_num1 > 1:
-			urls = (self.start_url.format(c) for c in range(2, page_num1 + 1))
-			for url in urls:
-				yield scrapy.Request(url, callback=self.parse)
-
-		# if cur_page < page_num:
-		# 	if cur_page == 1:
-		# 		yield scrapy.Request(response.url + str(cur_page + 1), callback=self.parse)
-		# 	else:
-		# 		# response.url + str(cur_page)
-		# 		yield scrapy.Request(re.sub(r'/(\d+)$', str(cur_page + 1), response.url), callback=self.parse)
-
-	def parse_item(self, response):
-		print(response.url)
-		if '抱歉，找不到您要的页' in response.text:
 			return
 		item = AppItem()
 		x = re.search(r'/C(\d+)$', response.url)
@@ -85,7 +51,7 @@ class AppsSpider(scrapy.Spider):
 		auth = l[2].xpath('./span/@title').extract_first() if len(li) == 4 else ''
 		version = li[3] if len(li) == 4 else ''
 
-		pic_url = response.xpath('.//*[@id="contentImages"]/ul/li/a/img/@src').extract()
+		pic_url = response.xpath('.//*[@id="contentImages"]/ul/li/a/img[@class="showimg"]/@src').extract()
 		des = response.xpath(".//*[@id='app_strdesc']/text()").extract_first()
 		comm_word = response.xpath(".//*[@id='commentForm']/h4/span/text()").extract_first()
 		s = re.search(r'\d+', comm_word) if comm_word else ''
@@ -105,5 +71,4 @@ class AppsSpider(scrapy.Spider):
 		item['des'] = des
 		item['comm_num'] = comm_num
 		item['crawl_time'] = datetime.now().strftime(SQL_DATETIME_FORMAT)
-		print(item)
 		yield item

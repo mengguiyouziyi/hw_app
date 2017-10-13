@@ -35,7 +35,7 @@ def send_key(key):
 			sql = """select soft_id, soft_name from hw_app ORDER BY soft_id"""
 			cursor.execute(sql)
 			results = cursor.fetchall()
-			values = [i['soft_name'].strip() for i in results if i['soft_name']]
+			values = [i['soft_id'].strip() for i in results if i['soft_id']]
 	finally:
 		mysql.close()
 
@@ -49,7 +49,8 @@ def send_key(key):
 
 
 if __name__ == '__main__':
-	send_key(key='zh_word')
+	# send_key(key='zh_word')
+	send_key(key='hw_id')
 
 
 
